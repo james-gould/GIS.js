@@ -28,16 +28,24 @@ var Utils = {
  */
 var Gis = { 
 
+    /**
+     * Validates a (latitude, longitude) pair as being a valid float, and within the expected range of each respective value.
+     */
     ValidLatLng: (latitude, longitude, callback) => {
         if(!Utils.isFloat(latitude) || !Utils.isFloat(longitude)) {
-            var err = new Error("Latitude/longitude pair is of an invalid datatype");
-            return callback(err)
+            if(typeof callback === undefined) {
+                return false;
+            } else {
+                var err = new Error("Latitude/longitude pair is of an invalid datatype");
+                return callback(err);
+            }
+
         }
     },
 
 }
 
-/**
+/*
  * Export only Gis, do not release any local objects or functions (extracted or otherwise) used.
  */
 module.exports = Gis;
