@@ -53,6 +53,7 @@ var Gis = {
                 return callback(err);
             }
         }
+        return (latitude >= -90 && latitude <= 90) && (longitude >= -180 && longitude <= 180);
     },
 
     ValidPoint: (point) => {
