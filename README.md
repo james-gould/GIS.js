@@ -18,11 +18,13 @@ And you're set!
 
 You can then access the API like:
 
-```var latitude = 51.5245932;
+```
+var latitude = 51.5245932;
 var longitude = -0.1356357;
 
 if(Gis.ValidLatLng(latitude, longitude) {
  // Pan to location
+ }
  ```
  
  Further examples and full documentation on each API function can be found on the [Wiki!](https://github.com/james-gould/GIS.js/wiki)
