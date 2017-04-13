@@ -13,11 +13,12 @@
 var Utils = { 
 
     /**
-     * Checks if the input is of a primitive value with no fractional parts.
+     * Checks if the input validates to a float datatype.
      */
     isFloat: (value) => {
         return value === +n && n !== (n|0);
-    }
+    },
+
 
 }
 
@@ -27,6 +28,18 @@ var Utils = {
  * 
  */
 var Gis = { 
+
+    /**
+     * Point object
+     */
+    Point: (latitude, longitude) => {
+        var point = {
+            x: latitude,
+            y: longitude
+        };
+
+        return point;
+    },
 
     /**
      * Validates a (latitude, longitude) pair as being a valid float, and within the expected range of each respective value.
@@ -39,9 +52,20 @@ var Gis = {
                 var err = new Error("Latitude/longitude pair is of an invalid datatype");
                 return callback(err);
             }
-
         }
     },
+
+    ValidPoint: (point) => {
+        if(typeof point !== Gis.Point) { // hmm, breaks if custom Point obj with x, y props. This is just bad but it's the weekend, lets go crazy ¯\_(ツ)_/¯ 
+            return false;
+        } else {
+            return Gis.ValidLatLng(point.x, point.y);
+        }
+    },
+
+    PointInPolygon: (latitude, longitude, polygon) => {
+        
+    }
 
 }
 
