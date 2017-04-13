@@ -40,4 +40,4 @@ var Gis = {
 // /**
 //  * Export only Gis, do not release any local objects or functions (extracted or otherwise) used.
 //  */
-// module.exports = Gis;
+module.exports = Gis;

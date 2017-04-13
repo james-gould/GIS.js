@@ -1,0 +1,23 @@
+{
+  "name": "gis.js",
+  "version": "1.0.1",
+  "description": "A collection of utility functions for working with GIS data.",
+  "main": "Gis.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/james-gould/GIS.js.git"
+  },
+  "keywords": [
+    "gis",
+    "openstreetmap"
+  ],
+  "author": "James Gould",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/james-gould/GIS.js/issues"
+  },
+  "homepage": "https://github.com/james-gould/GIS.js#readme"
+}
