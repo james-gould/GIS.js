@@ -4,6 +4,8 @@
  * 
  *  Original Creator: James Gould © 2017
  * 
+ *  ----------> UNDER ACTIVE DEVELOPMENT. FEATURES, BUG FIXES AND REFACTORING WILL OCCUR NIGH ON DAILY. <----------
+ * 
  */
 
 
@@ -56,6 +58,9 @@ var Gis = {
         return (latitude >= -90 && latitude <= 90) && (longitude >= -180 && longitude <= 180);
     },
 
+    /**
+     * Validates if a Point object is valid.
+     */
     ValidPoint: (point) => {
         if(typeof point !== Gis.Point) { // hmm, breaks if custom Point obj with x, y props. This is just bad but it's the weekend, lets go crazy ¯\_(ツ)_/¯ 
             return false;
@@ -64,6 +69,9 @@ var Gis = {
         }
     },
 
+    /**
+     * Determines if a given (latitude, longitude) pair is within a given polygon. Currently only works will an array of Point objects.
+     */
     PointInPolygon: (latitude, longitude, polygon) => {
         
     }
