@@ -46,14 +46,9 @@ var Gis = {
     /**
      * Validates a (latitude, longitude) pair as being a valid float, and within the expected range of each respective value.
      */
-    ValidLatLng: (latitude, longitude, callback) => {
+    ValidLatLng: (latitude, longitude) => {
         if(!Utils.isFloat(latitude) || !Utils.isFloat(longitude)) {
-            if(typeof callback === undefined) {
                 return false;
-            } else {
-                var err = new Error("Latitude/longitude pair is of an invalid datatype");
-                return callback(err);
-            }
         }
         return (latitude >= -90 && latitude <= 90) && (longitude >= -180 && longitude <= 180);
     },
