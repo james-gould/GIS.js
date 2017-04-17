@@ -1,6 +1,6 @@
 {
   "name": "gis.js",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A collection of utility functions for working with GIS data.",
   "main": "Gis.js",
   "scripts": {
