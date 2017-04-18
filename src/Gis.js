@@ -61,8 +61,6 @@ var Gis = {
             return false;
         } else {
             return Gis.ValidLatLng(point.x, point.y);
-        }
-        return (latitude >= -90 && latitude <= 90) && (longitude >= -180 && longitude <= 180);
     },
 
     /**
