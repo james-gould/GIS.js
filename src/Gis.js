@@ -55,12 +55,14 @@ var Gis = {
 
     /**
      * Validates if a Point object is valid.
+     * @param {object} point - A point on a map containing an X and Y coordinate.
      */
     ValidPoint: (point) => {
         if(typeof point !== Gis.Point) { // hmm, breaks if custom Point obj with x, y props. This is just bad but it's the weekend, lets go crazy ¯\_(ツ)_/¯ 
             return false;
         } else {
             return Gis.ValidLatLng(point.x, point.y);
+        }
     },
 
     /**
