@@ -4,6 +4,8 @@
  * 
  *  Original Creator: James Gould © 2017
  * 
+ *  ----------> UNDER ACTIVE DEVELOPMENT. FEATURES, BUG FIXES AND REFACTORING WILL OCCUR NIGH ON DAILY. <----------
+ * 
  */
 
 
@@ -13,11 +15,12 @@
 var Utils = { 
 
     /**
-     * Checks if the input is of a primitive value with no fractional parts.
+     * Checks if the input validates to a float datatype.
      */
     isFloat: (value) => {
         return value === +n && n !== (n|0);
-    }
+    },
+
 
 }
 
@@ -29,15 +32,50 @@ var Utils = {
 var Gis = { 
 
     /**
+     * Point object
+     */
+    Point: (latitude, longitude) => {
+        var point = {
+            x: latitude,
+            y: longitude
+        };
+
+        return point;
+    },
+
+    /**
      * Validates a (latitude, longitude) pair as being a valid float, and within the expected range of each respective value.
      */
     ValidLatLng: (latitude, longitude) => {
         if(!Utils.isFloat(latitude) || !Utils.isFloat(longitude)) {
+<<<<<<< HEAD
             return false
+=======
+                return false;
+        }
+        return (latitude >= -90 && latitude <= 90) && (longitude >= -180 && longitude <= 180);
+    },
+
+    /**
+     * Validates if a Point object is valid.
+     */
+    ValidPoint: (point) => {
+        if(typeof point !== Gis.Point) { // hmm, breaks if custom Point obj with x, y props. This is just bad but it's the weekend, lets go crazy ¯\_(ツ)_/¯ 
+            return false;
+        } else {
+            return Gis.ValidLatLng(point.x, point.y);
+>>>>>>> 267976d87522ee3b53dd2378135f1cb23a8be4ef
         }
 
         return (latitude >= -90 && latitude <= 90) && (longitude >= -180 && longitude <= 180);
     },
+
+    /**
+     * Determines if a given (latitude, longitude) pair is within a given polygon. Currently only works will an array of Point objects.
+     */
+    PointInPolygon: (latitude, longitude, polygon) => {
+        
+    }
 
 }
 

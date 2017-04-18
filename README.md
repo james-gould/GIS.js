@@ -23,7 +23,7 @@ var latitude = 51.5245932;
 var longitude = -0.1356357;
 
 if(Gis.ValidLatLng(latitude, longitude) {
- // Pan to location
+ // Do stuff!
  }
  ```
  
