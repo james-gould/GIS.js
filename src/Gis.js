@@ -48,10 +48,7 @@ var Gis = {
      */
     ValidLatLng: (latitude, longitude) => {
         if(!Utils.isFloat(latitude) || !Utils.isFloat(longitude)) {
-<<<<<<< HEAD
             return false
-=======
-                return false;
         }
         return (latitude >= -90 && latitude <= 90) && (longitude >= -180 && longitude <= 180);
     },
@@ -64,9 +61,7 @@ var Gis = {
             return false;
         } else {
             return Gis.ValidLatLng(point.x, point.y);
->>>>>>> 267976d87522ee3b53dd2378135f1cb23a8be4ef
         }
-
         return (latitude >= -90 && latitude <= 90) && (longitude >= -180 && longitude <= 180);
     },
 
