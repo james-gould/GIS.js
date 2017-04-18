@@ -11,8 +11,8 @@ Any problems? [Add an issue!](https://github.com/james-gould/GIS.js/issues)
 
 To install, simply do the following:
 
-1. `npm install Gis.js`
-2. In your code, simply add `var Gis = require('Gis.js');`
+1. `npm install gis.js`
+2. In your code, simply add `var Gis = require('gis.js');`
 
 And you're set!
 
