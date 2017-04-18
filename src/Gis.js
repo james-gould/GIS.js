@@ -19,9 +19,7 @@ var Utils = {
      */
     isFloat: (value) => {
         return value === +n && n !== (n|0);
-    },
-
-
+    }
 }
 
 
@@ -57,23 +55,23 @@ var Gis = {
      * Validates if a Point object is valid.
      */
     ValidPoint: (point) => {
-        if(typeof point !== Gis.Point) { // hmm, breaks if custom Point obj with x, y props. This is just bad but it's the weekend, lets go crazy ¯\_(ツ)_/¯ 
-            return false;
-        } else {
-            return Gis.ValidLatLng(point.x, point.y);
-        }
+        return !(point instanceof Gis.Point) ? Gis.ValidLatLng(point.x, point.y) : false;
     },
 
     /**
      * Determines if a given (latitude, longitude) pair is within a given polygon. Currently only works will an array of Point objects.
      */
     PointInPolygon: (latitude, longitude, polygon) => {
-        
+        if(polygon instanceof Array === false || !Gis.ValidLatLng(latitude, longitude)) {
+            return false;
+        }
+
+
     }
 
 }
 
 /*
- * Export only Gis, do not release any local objects or functions (extracted or otherwise) used.
+ * Export only Gis, do not release any local objects or functions (extracted or otherwise).
  */
 module.exports = Gis;
