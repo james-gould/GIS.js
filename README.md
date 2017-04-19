@@ -2,6 +2,8 @@
 
 A collection of useful functions to be used in parallel with your favourite GIS products. 
 
+*Please note that `Gis.js` is under active development and subject to change daily. I'm working to include as much useful stuff each day, so please `npm update` each day before working with `Gis.js`. Thanks 💖* 
+
 # Getting Started
 
 `Gis.js` is simple to use by design and can easily be integrated with existing Node.js applications in a few minutes.
