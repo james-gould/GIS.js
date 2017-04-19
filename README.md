@@ -2,7 +2,7 @@
 
 A collection of useful functions to be used in parallel with your favourite GIS products. 
 
-*Please note that `Gis.js` is under active development and subject to change daily. I'm working to include as much useful stuff each day, so please `npm update` each day before working with `Gis.js`. Thanks 💖* 
+*Please note that `Gis.js` is under active development and subject to frequent change. I'm working to include as much useful stuff each day, so please `npm update` every time before working with `Gis.js`. Thanks 💖* 
 
 # Getting Started
 
