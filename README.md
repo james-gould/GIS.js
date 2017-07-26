@@ -2,11 +2,11 @@
 
 A collection of useful functions to be used in parallel with your favourite GIS products. 
 
-*Please note that `Gis.js` is under active development and subject to frequent change. I'm working to include as much useful stuff each day, so please `npm update` every time before working with `Gis.js`. Thanks 💖* 
+*Please note that `gis.js` is under active development and subject to frequent change. I'm working to include as much useful stuff each day, so please `npm update` every time before working with `gis.js`. Thanks 💖* 
 
 # Getting Started
 
-`Gis.js` is simple to use by design and can easily be integrated with existing Node.js applications in a few minutes.
+`gis.js` is simple to use by design and can easily be integrated with existing Node.js applications in a few minutes.
 In code documentation makes working with the library a breeze, and the docs found here can offer further assistance if needs be.
 
 Any problems? [Add an issue!](https://github.com/james-gould/GIS.js/issues)
