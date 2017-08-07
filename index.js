@@ -1,1 +1,1 @@
-module.exports = require('./lib.Gis.js');
+module.exports = require('./lib/Gis.js');
